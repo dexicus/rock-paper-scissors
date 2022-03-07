@@ -9,15 +9,18 @@ function computerPlay() {
 function playRound(player, computer) {
     playerSelection = prompt('Choose rock paper or scissors...').toLowerCase();
     computerSelection = computerSelection.toLowerCase();
-    if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
+    if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' &&
+            computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
         console.log(`You won - ${playerSelection} beats ${computerSelection}.`);
         return result = 'playerWin';
     }
-    else if ((playerSelection === 'rock' && computerSelection === 'paper') || (playerSelection === 'paper' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'rock')) {
+    else if ((playerSelection === 'rock' && computerSelection === 'paper') || (playerSelection === 'paper' &&
+            computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'rock')) {
         console.log(`You lost - ${computerSelection} beats ${playerSelection}.`);
         return result = 'computerWin';
     }
-    else if ((playerSelection === 'rock' && computerSelection === 'rock') || (playerSelection === 'paper' && computerSelection === 'paper') || (playerSelection === 'scissors' && computerSelection === 'scissors')) {
+    else if ((playerSelection === 'rock' && computerSelection === 'rock') || (playerSelection === 'paper' &&
+            computerSelection === 'paper') || (playerSelection === 'scissors' && computerSelection === 'scissors')) {
         console.log('You drew.');
         return result = 'draw';
     }
@@ -64,7 +67,7 @@ function main() {
 
 //Take player & computer choice, assign to a variable
 let playerSelection = '';
-let computerSelection = 'computerPlay()';
+let computerSelection = computerPlay();
 
 
 //Track who wins how many games, and how many are draws
